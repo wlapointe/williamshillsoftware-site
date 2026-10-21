@@ -17,3 +17,6 @@ originals change:
 | `cardiacstudy-player/DICOM_CONFORMANCE.pdf` | `docs/DICOM_CONFORMANCE.pdf` |
 | `cardiacstudy-player/CardiacStudyPlayer-Cardiology-Training-Guide.pdf` | `docs/CardiacStudyPlayer-Cardiology-Training-Guide.pdf` |
 | `cardiacstudy-player/icon.png` | `tools/app_icon_1024.png`, scaled to 256 px |
+
+`badges/` holds Apple's unaltered "Download on the Mac App Store" badges
+(toolbox.marketingtools.apple.com, black for light mode, white for dark).
