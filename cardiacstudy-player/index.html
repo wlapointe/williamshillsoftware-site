@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CardiacStudy Player Support</title>
-<meta name="description" content="Support for CardiacStudy Player, a Cath, Echo & CT DICOM Viewer for macOS: requirements, common questions, documentation and contact.">
+<title>CardiacStudy Player — Cath, Echo &amp; CT DICOM Viewer for Mac</title>
+<meta name="description" content="CardiacStudy Player is a Mac DICOM viewer for cath, echo, cardiac CT/MR and ECG studies: cines at their acquired frame rate, reports and ECG alongside, Quiz Mode for teaching. Offline, one purchase on the Mac App Store.">
 <link rel="stylesheet" href="/site.css">
 <link rel="icon" href="/cardiacstudy-player/icon.png">
 </head>
-<body>
+<body class="wide">
 <header class="site">
   <a class="brand" href="/">Williams Hill Software</a>
-  <nav><a href="/cardiacstudy-player/">Support</a><a href="/cardiacstudy-player/privacy.html">Privacy</a></nav>
+  <nav><a href="#features">Features</a><a href="#support">Support</a><a href="/cardiacstudy-player/privacy.html">Privacy</a></nav>
 </header>
 <main>
   <div class="app-head">
@@ -29,20 +29,104 @@
     </picture>
   </a>
 
-  <p>CardiacStudy Player opens patient CDs, DICOMDIR folders and loose DICOM files and plays every run the way it was recorded: angiography and fluoroscopy at their acquired frame rate, echo clips, CT and MR series, ECG and hemodynamic waveforms, and structured and PDF reports. It is made for cardiology teaching, case review and conference preparation.</p>
+  <p class="lede">Play cath and echo cines at their acquired frame rate, with the study's reports and ECG in the same window. Opens patient CDs offline. One purchase, no subscription.</p>
+
+  <div class="previews">
+    <figure>
+      <video src="/cardiacstudy-player/media/preview-angiography.mp4" poster="/cardiacstudy-player/media/poster-angiography.jpg"
+             width="960" height="540" autoplay muted loop playsinline controls preload="metadata"
+             aria-label="App preview: opening a cath study and playing coronary angiography runs"></video>
+      <figcaption>Angiography: open a cath CD and play every run</figcaption>
+    </figure>
+    <figure>
+      <video src="/cardiacstudy-player/media/preview-echo.mp4" poster="/cardiacstudy-player/media/poster-echo.jpg"
+             width="960" height="540" autoplay muted loop playsinline controls preload="metadata"
+             aria-label="App preview: playing echocardiography clips"></video>
+      <figcaption>Echo: clips, Doppler and stills from the same study</figcaption>
+    </figure>
+  </div>
+
+  <h2 id="features">Features</h2>
+  <div class="tabs" role="tablist" aria-label="Features" hidden>
+    <button class="tab" role="tab" aria-selected="true" aria-controls="f-play" id="t-play">Play it as acquired</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo" id="t-echo">Echo, CT &amp; MR</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-ecg" id="t-ecg">ECG &amp; waveforms</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-report" id="t-report">Reports &amp; teaching</button>
+  </div>
+
+  <section class="page" id="f-play" role="tabpanel" aria-labelledby="t-play">
+    <img src="/cardiacstudy-player/media/angiography.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy Player showing a coronary angiogram with the run thumbnails beside it">
+    <div>
+      <h3>Play it as acquired</h3>
+      <ul>
+        <li>Angiography and fluoroscopy at their recorded frame rate</li>
+        <li>Step frame by frame, change the speed, set start and end frames</li>
+        <li>DSA subtraction with your choice of mask frame and pixel shift</li>
+        <li>Window/level, presets and edge enhancement</li>
+        <li>Zoom and pan at full resolution</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page" id="f-echo" role="tabpanel" aria-labelledby="t-echo">
+    <img src="/cardiacstudy-player/media/echo.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy Player showing an echocardiography Doppler image">
+    <div>
+      <h3>Echo, CT &amp; MR</h3>
+      <ul>
+        <li>Echo clips, video and still images</li>
+        <li>CT and MR series you step through slice by slice</li>
+        <li>Calipers calibrated from the ultrasound region or to catheter size</li>
+        <li>Reads current DICOM compression, including JPEG XL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page" id="f-ecg" role="tabpanel" aria-labelledby="t-ecg">
+    <img src="/cardiacstudy-player/media/ecg.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy Player showing a 12-lead ECG drawn as lead strips">
+    <div>
+      <h3>ECG &amp; waveforms</h3>
+      <ul>
+        <li>12-lead ECG and hemodynamic waveforms drawn as calibrated lead strips</li>
+        <li>Paged like a document, right beside the imaging</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page" id="f-report" role="tabpanel" aria-labelledby="t-report">
+    <img src="/cardiacstudy-player/media/report.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy Player showing a quantitative arteriography report">
+    <div>
+      <h3>Reports &amp; teaching</h3>
+      <ul>
+        <li>Structured reports, PDF reports and presentation states, paged like documents</li>
+        <li>Quiz Mode: hide the report, read the images cold, then compare</li>
+        <li>Export QuickTime movies and still frames for lectures</li>
+        <li>Crop burned-in patient details out of exported images</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div><strong>Open any study</strong><p>Patient CDs, DICOMDIR folders or loose DICOM files. Every run, report and waveform in one strip, in one window.</p></div>
+    <div><strong>Private by design</strong><p>Works offline with no account. The app cannot use the network, and nothing leaves your Mac.</p></div>
+    <div><strong>One purchase</strong><p>Paid once on the Mac App Store, with free updates. No subscription and no in-app purchases.</p></div>
+  </div>
 
   <div class="notice">
     <p><strong>Not for clinical use.</strong> CardiacStudy Player is not a certified medical device and must not be used for diagnosis or clinical decisions. Read and report from your clinical PACS or cath lab workstation.</p>
   </div>
 
-  <h2>Requirements</h2>
+  <h2 id="support">Support</h2>
+
+  <h3>Requirements</h3>
   <ul>
     <li>macOS 15 or later</li>
     <li>Apple silicon or Intel Mac</li>
     <li>No account and no internet connection needed</li>
   </ul>
-
-  <h2>Common questions</h2>
 
   <h3>What can it open?</h3>
   <p>Patient CDs, DICOMDIR folders, folders of DICOM files and single DICOM files. The <a href="/cardiacstudy-player/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> lists every supported image type and compression.</p>
@@ -56,18 +140,40 @@
   <h3>A study won't open, or something looks wrong</h3>
   <p>Email us with the modality (for example XA, US or CT), the equipment vendor if you know it, what you expected and what you saw. A screenshot of the app with patient details cropped out helps. <strong>Please never send patient images, discs or files that identify a patient.</strong></p>
 
-  <h2>Documentation</h2>
+  <h3>Documentation</h3>
   <ul>
     <li><a href="/cardiacstudy-player/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> (PDF)</li>
     <li><a href="/cardiacstudy-player/CardiacStudyPlayer-Cardiology-Training-Guide.pdf">Cardiology Training Guide</a> (PDF): using the app for cath, echo, CT/MR and ECG review and teaching</li>
   </ul>
 
-  <h2>Contact</h2>
+  <h3>Contact</h3>
   <div class="contact">
     <p>Questions, problems and suggestions: <a href="mailto:support@williamshillsoftware.com">support@williamshillsoftware.com</a></p>
     <p>You can also use the email link in <strong>CardiacStudy Player ▸ About CardiacStudy Player</strong>.</p>
   </div>
 </main>
 <footer>© 2026 Wil Lapointe · <a href="/cardiacstudy-player/privacy.html">Privacy policy</a></footer>
+<script>
+// Feature pages: one page at a time once JavaScript runs; without it every
+// page shows, stacked.
+(function () {
+  var tabs = document.querySelector('.tabs');
+  if (!tabs) return;
+  var buttons = tabs.querySelectorAll('.tab');
+  function show(btn) {
+    buttons.forEach(function (b) {
+      var on = b === btn;
+      b.setAttribute('aria-selected', String(on));
+      document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.hidden = false;
+  show(buttons[0]);
+  tabs.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab');
+    if (btn) show(btn);
+  });
+})();
+</script>
 </body>
 </html>
