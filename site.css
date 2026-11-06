@@ -59,3 +59,39 @@ footer a { color: var(--muted); }
   h1 { font-size: 28px; }
   .app-head img { width: 72px; height: 72px; }
 }
+
+/* Wide product page (CardiacStudy Player): room for two columns of media. */
+body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
+.previews {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 20px; margin: 8px 0 8px;
+}
+.previews figure { margin: 0; min-width: 0; }
+.previews video, .page img {
+  display: block; width: 100%; height: auto; background: #000;
+  border: 1px solid var(--rule); border-radius: 10px;
+}
+.previews figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.tab {
+  font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+  background: var(--panel); color: var(--text); border: 1px solid var(--rule);
+  border-radius: 999px; padding: 7px 16px;
+}
+.tab[aria-selected="true"] { background: var(--link); border-color: var(--link); color: #fff; }
+.page {
+  display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 24px; align-items: start; margin-bottom: 28px;
+}
+.page h3 { margin-top: 0; }
+.tabs:not([hidden]) ~ .page h3 { display: none; }
+.facts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px; margin: 32px 0 8px;
+}
+.facts div { background: var(--panel); border-radius: 14px; padding: 16px 18px; }
+.facts p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+@media (max-width: 720px) {
+  .page { grid-template-columns: 1fr; }
+}
+.tabs[hidden], .page[hidden] { display: none; }
