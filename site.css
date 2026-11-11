@@ -72,6 +72,7 @@ body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
   border: 1px solid var(--rule); border-radius: 10px;
 }
 .previews figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.new { font-size: .7em; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #fff; background: #0a84ff; border-radius: 999px; padding: 1px 7px; margin-left: 4px; vertical-align: 2px; }
 .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
 .tab {
   font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
