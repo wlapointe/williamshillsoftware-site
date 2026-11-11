@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CardiacStudy Player — Cath, Echo &amp; CT DICOM Viewer for Mac</title>
-<meta name="description" content="CardiacStudy Player is a Mac DICOM viewer for cath, echo, cardiac CT/MR and ECG studies: cines at their acquired frame rate, reports and ECG alongside, Quiz Mode for teaching. Offline, one purchase on the Mac App Store.">
+<title>CardiacStudy: DICOM Viewer — Cath, Echo, CT &amp; MR Player for Mac</title>
+<meta name="description" content="CardiacStudy: DICOM Viewer is a Mac DICOM viewer for cath, echo, cardiac CT/MR and ECG studies: cines at their acquired frame rate, reports and ECG alongside, Quiz Mode for teaching. Offline, one purchase on the Mac App Store.">
 <link rel="stylesheet" href="/site.css">
 <link rel="icon" href="/cardiacstudy-player/icon.png">
 </head>
@@ -15,10 +15,10 @@
 </header>
 <main>
   <div class="app-head">
-    <img src="/cardiacstudy-player/icon.png" alt="CardiacStudy Player icon">
+    <img src="/cardiacstudy-player/icon.png" alt="CardiacStudy: DICOM Viewer icon">
     <div>
-      <h1>CardiacStudy Player</h1>
-      <p>Cath, Echo &amp; CT DICOM Viewer</p>
+      <h1>CardiacStudy: DICOM Viewer</h1>
+      <p>Cath, Echo, CT &amp; MR Player</p>
     </div>
   </div>
 
@@ -49,14 +49,15 @@
   <h2 id="features">Features</h2>
   <div class="tabs" role="tablist" aria-label="Features" hidden>
     <button class="tab" role="tab" aria-selected="true" aria-controls="f-play" id="t-play">Play it as acquired</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo" id="t-echo">Echo, CT &amp; MR</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo" id="t-echo">Echo</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-ct" id="t-ct">CT &amp; MR <span class="new">New</span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-ecg" id="t-ecg">ECG &amp; waveforms</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-report" id="t-report">Reports &amp; teaching</button>
   </div>
 
   <section class="page" id="f-play" role="tabpanel" aria-labelledby="t-play">
     <img src="/cardiacstudy-player/media/angiography.jpg" width="1440" height="900" loading="lazy"
-         alt="CardiacStudy Player showing a coronary angiogram with the run thumbnails beside it">
+         alt="CardiacStudy: DICOM Viewer showing a coronary angiogram with the run thumbnails beside it">
     <div>
       <h3>Play it as acquired</h3>
       <ul>
@@ -71,21 +72,34 @@
 
   <section class="page" id="f-echo" role="tabpanel" aria-labelledby="t-echo">
     <img src="/cardiacstudy-player/media/echo.jpg" width="1440" height="900" loading="lazy"
-         alt="CardiacStudy Player showing an echocardiography Doppler image">
+         alt="CardiacStudy: DICOM Viewer showing an echocardiography Doppler image">
     <div>
-      <h3>Echo, CT &amp; MR</h3>
+      <h3>Echo</h3>
       <ul>
         <li>Echo clips, video and still images</li>
-        <li>CT and MR series you step through slice by slice</li>
         <li>Calipers calibrated from the ultrasound region or to catheter size</li>
         <li>Reads current DICOM compression, including JPEG XL</li>
       </ul>
     </div>
   </section>
 
+  <section class="page" id="f-ct" role="tabpanel" aria-labelledby="t-ct">
+    <img src="/cardiacstudy-player/media/ct.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy: DICOM Viewer showing a cardiac CT slice with its position on a scout reference view and marked landmark slices">
+    <div>
+      <h3>CT &amp; MR (new in 1.1)</h3>
+      <ul>
+        <li>CT and MR series you step through slice by slice</li>
+        <li>Each slice's body position, for example "S 42.5 mm"</li>
+        <li>A reference view on the study's own scout image: click or drag it to jump to any level</li>
+        <li>Mark landmark slices (Aortic root, Left main, LAD, Apex or your own names) and jump back to them</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="page" id="f-ecg" role="tabpanel" aria-labelledby="t-ecg">
     <img src="/cardiacstudy-player/media/ecg.jpg" width="1440" height="900" loading="lazy"
-         alt="CardiacStudy Player showing a 12-lead ECG drawn as lead strips">
+         alt="CardiacStudy: DICOM Viewer showing a 12-lead ECG drawn as lead strips">
     <div>
       <h3>ECG &amp; waveforms</h3>
       <ul>
@@ -97,7 +111,7 @@
 
   <section class="page" id="f-report" role="tabpanel" aria-labelledby="t-report">
     <img src="/cardiacstudy-player/media/report.jpg" width="1440" height="900" loading="lazy"
-         alt="CardiacStudy Player showing a quantitative arteriography report">
+         alt="CardiacStudy: DICOM Viewer showing a quantitative arteriography report">
     <div>
       <h3>Reports &amp; teaching</h3>
       <ul>
@@ -116,7 +130,7 @@
   </div>
 
   <div class="notice">
-    <p><strong>Not for clinical use.</strong> CardiacStudy Player is not a certified medical device and must not be used for diagnosis or clinical decisions. Read and report from your clinical PACS or cath lab workstation.</p>
+    <p><strong>Not for clinical use.</strong> CardiacStudy: DICOM Viewer is not a certified medical device and must not be used for diagnosis or clinical decisions. Read and report from your clinical PACS or cath lab workstation.</p>
   </div>
 
   <h2 id="support">Support</h2>
@@ -127,6 +141,7 @@
     <li>Apple silicon or Intel Mac</li>
     <li>No account and no internet connection needed</li>
   </ul>
+  <p>Once installed, the app appears as <strong>CardiacStudy Player</strong> in your Applications folder and menu bar.</p>
 
   <h3>What can it open?</h3>
   <p>Patient CDs, DICOMDIR folders, folders of DICOM files and single DICOM files. The <a href="/cardiacstudy-player/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> lists every supported image type and compression.</p>
