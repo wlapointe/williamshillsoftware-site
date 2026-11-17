@@ -50,7 +50,9 @@
   <div class="tabs" role="tablist" aria-label="Features" hidden>
     <button class="tab" role="tab" aria-selected="true" aria-controls="f-play" id="t-play">Play it as acquired</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo" id="t-echo">Echo</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="f-ct" id="t-ct">CT &amp; MR <span class="new">New</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-angio-measure" id="t-angio-measure">Angio measurements <span class="new">New</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo-measure" id="t-echo-measure">Echo measurements <span class="new">New</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-ct" id="t-ct">CT &amp; MR</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-ecg" id="t-ecg">ECG &amp; waveforms</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-report" id="t-report">Reports &amp; teaching</button>
   </div>
@@ -83,11 +85,41 @@
     </div>
   </section>
 
+  <section class="page" id="f-angio-measure" role="tabpanel" aria-labelledby="t-angio-measure">
+    <img src="/cardiacstudy-player/media/angio-stenosis.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy: DICOM Viewer zoomed onto a circumflex lesion with stenosis diameters, calibrated on the guiding catheter">
+    <div>
+      <h3>Angio measurements (new in 1.2)</h3>
+      <ul>
+        <li>Stenosis: reference and minimal lumen diameters that snap to the vessel edges, a second reference and lesion length</li>
+        <li>% diameter and % area stenosis, in millimetres once the caliper is calibrated on the catheter</li>
+        <li>LV ejection fraction from end-diastolic and end-systolic ventriculogram traces</li>
+        <li>Text, arrows, boxes and ovals, kept with the study and burned into copies and exports</li>
+        <li>Every result is labelled "Educational use only"</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page" id="f-echo-measure" role="tabpanel" aria-labelledby="t-echo-measure">
+    <img src="/cardiacstudy-player/media/echo-biplane.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy: DICOM Viewer showing an apical 2-chamber LV trace with the biplane Simpson's volumes and ejection fraction">
+    <div>
+      <h3>Echo measurements (new in 1.2)</h3>
+      <ul>
+        <li>LV volumes and EF by Simpson's method, single-plane or biplane across two clips</li>
+        <li>Doppler velocities, VTI and pressure half-time, with E/A and E/e′</li>
+        <li>2D dimensions and areas, LV mass, LA volume and M-mode</li>
+        <li>Each calibrated by the ultrasound region it is drawn in</li>
+        <li>A measurement summary for the whole study, copied as a table or exported as CSV, with no patient details from the images</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="page" id="f-ct" role="tabpanel" aria-labelledby="t-ct">
     <img src="/cardiacstudy-player/media/ct.jpg" width="1440" height="900" loading="lazy"
          alt="CardiacStudy: DICOM Viewer showing a cardiac CT slice with its position on a scout reference view and marked landmark slices">
     <div>
-      <h3>CT &amp; MR (new in 1.1)</h3>
+      <h3>CT &amp; MR</h3>
       <ul>
         <li>CT and MR series you step through slice by slice</li>
         <li>Each slice's body position, for example "S 42.5 mm"</li>
@@ -116,12 +148,20 @@
       <h3>Reports &amp; teaching</h3>
       <ul>
         <li>Structured reports, PDF reports and presentation states, paged like documents</li>
-        <li>Quiz Mode: hide the report, read the images cold, then compare</li>
+        <li>Quiz Mode: hide the report, read the images cold, record your findings with the measurements behind them, then compare</li>
         <li>Export QuickTime movies and still frames for lectures</li>
         <li>Crop burned-in patient details out of exported images</li>
       </ul>
     </div>
   </section>
+
+  <h2 id="tutorial">Tutorial: LV volumes and EF</h2>
+  <figure class="tutorial">
+    <video src="/cardiacstudy-player/media/walkthrough-lv-volumes.mp4" poster="/cardiacstudy-player/media/poster-walkthrough-lv-volumes.jpg"
+           width="958" height="632" controls playsinline preload="none"
+           aria-label="Tutorial: tracing the LV in apical 4- and 2-chamber views at end-diastole and end-systole for biplane Simpson's volumes and ejection fraction"></video>
+    <figcaption>Measure ▸ LV Volumes, step by step: trace the apical 4- and 2-chamber views at end-diastole and end-systole for biplane volumes and EF (2 min 19 s)</figcaption>
+  </figure>
 
   <div class="facts">
     <div><strong>Open any study</strong><p>Patient CDs, DICOMDIR folders or loose DICOM files. Every run, report and waveform in one strip, in one window.</p></div>
