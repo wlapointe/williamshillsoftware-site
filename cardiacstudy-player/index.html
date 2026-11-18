@@ -3,31 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CardiacStudy: DICOM Viewer — Cath, Echo, CT &amp; MR Player for Mac</title>
-<meta name="description" content="CardiacStudy: DICOM Viewer is a Mac DICOM viewer for cath, echo, cardiac CT/MR and ECG studies: cines at their acquired frame rate, reports and ECG alongside, Quiz Mode for teaching. Offline, one purchase on the Mac App Store.">
+<title>CardiacStudy: DICOM Viewer — Cath, Echo, CT &amp; MR Player for Mac and Windows</title>
+<meta name="description" content="CardiacStudy: DICOM Viewer is a DICOM viewer for Mac and Windows for cath, echo, cardiac CT/MR and ECG studies: cines at their acquired frame rate, reports and ECG alongside, measurements and Quiz Mode for teaching. Offline, one purchase on the Mac App Store or the Microsoft Store.">
 <link rel="stylesheet" href="/site.css">
 <link rel="icon" href="/cardiacstudy-player/icon.png">
 </head>
 <body class="wide">
 <header class="site">
   <a class="brand" href="/">Williams Hill Software</a>
-  <nav><a href="#features">Features</a><a href="#support">Support</a><a href="/cardiacstudy-player/privacy.html">Privacy</a></nav>
+  <nav><a href="#features">Features</a><a href="#versions">Versions</a><a href="#support">Support</a><a href="/cardiacstudy-player/privacy.html">Privacy</a></nav>
 </header>
 <main>
   <div class="app-head">
     <img src="/cardiacstudy-player/icon.png" alt="CardiacStudy: DICOM Viewer icon">
     <div>
       <h1>CardiacStudy: DICOM Viewer</h1>
-      <p>Cath, Echo, CT &amp; MR Player</p>
+      <p>Cath, Echo, CT &amp; MR Player for Mac and Windows</p>
     </div>
   </div>
 
-  <a class="store-badge" href="https://apps.apple.com/app/id6824492948">
-    <picture>
-      <source srcset="/badges/mac-app-store-white.svg" media="(prefers-color-scheme: dark)">
-      <img src="/badges/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40">
-    </picture>
-  </a>
+  <div class="badges">
+    <a class="store-badge" href="https://apps.apple.com/app/id6824492948">
+      <picture>
+        <source srcset="/badges/mac-app-store-white.svg" media="(prefers-color-scheme: dark)">
+        <img src="/badges/mac-app-store-black.svg" alt="Download on the Mac App Store" width="156" height="40">
+      </picture>
+    </a>
+    <a class="store-badge" href="https://apps.microsoft.com/detail/9NCS1WJT41L2">
+      <picture>
+        <source srcset="/badges/microsoft-store-light.svg" media="(prefers-color-scheme: dark)">
+        <img src="/badges/microsoft-store-dark.svg" alt="Get it from Microsoft" width="147" height="40">
+      </picture>
+    </a>
+  </div>
+  <p class="latest">Mac App Store: version <span id="mac-version">1.2.0</span> · Microsoft Store: version 1.2.1 (CardiacStudy Player, with a 30-day free trial) · <a href="#versions">What's new</a></p>
 
   <p class="lede">Play cath and echo cines at their acquired frame rate, with the study's reports and ECG in the same window. Opens patient CDs offline. One purchase, no subscription.</p>
 
@@ -44,6 +53,12 @@
              aria-label="App preview: playing echocardiography clips"></video>
       <figcaption>Echo: clips, Doppler and stills from the same study</figcaption>
     </figure>
+    <figure>
+      <video src="/cardiacstudy-player/media/preview-echo-biplane.mp4" poster="/cardiacstudy-player/media/poster-echo-biplane.jpg"
+             width="960" height="540" autoplay muted loop playsinline controls preload="metadata"
+             aria-label="App preview: tracing the left ventricle for biplane Simpson's volumes and ejection fraction"></video>
+      <figcaption>Echo measurements: biplane LV volumes and EF by Simpson's method</figcaption>
+    </figure>
   </div>
 
   <h2 id="features">Features</h2>
@@ -52,6 +67,8 @@
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo" id="t-echo">Echo</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-angio-measure" id="t-angio-measure">Angio measurements <span class="new">New</span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-echo-measure" id="t-echo-measure">Echo measurements <span class="new">New</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-doppler" id="t-doppler">Doppler <span class="new">New</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="f-summary" id="t-summary">Measurement summary <span class="new">New</span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-ct" id="t-ct">CT &amp; MR</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-ecg" id="t-ecg">ECG &amp; waveforms</button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="f-report" id="t-report">Reports &amp; teaching</button>
@@ -115,6 +132,35 @@
     </div>
   </section>
 
+  <section class="page" id="f-doppler" role="tabpanel" aria-labelledby="t-doppler">
+    <img src="/cardiacstudy-player/media/echo-doppler.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy: DICOM Viewer showing a mitral inflow pulsed-wave Doppler strip with E and A velocities, peak gradients and E/A measured">
+    <div>
+      <h3>Doppler (new in 1.2)</h3>
+      <ul>
+        <li>Peak velocities and gradients, VTI and pressure half-time on PW and CW Doppler strips</li>
+        <li>E/A and E/e′ worked out for you</li>
+        <li>Calibrated from the Doppler region's own velocity scale, so no manual setup</li>
+        <li>The pointer is a crosshair wherever a click places a point</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="page" id="f-summary" role="tabpanel" aria-labelledby="t-summary">
+    <img src="/cardiacstudy-player/media/measurement-summary.jpg" width="1440" height="900" loading="lazy"
+         alt="CardiacStudy: DICOM Viewer's Measurement Summary window listing every measurement in an echo study with study results such as biplane EF">
+    <div>
+      <h3>Measurement summary (new in 1.2)</h3>
+      <ul>
+        <li>Every measurement in the study in one window, with where each was made</li>
+        <li>The mean of repeated measurements (never of stenoses)</li>
+        <li>Study results that combine images, such as biplane EF, stroke volume and aortic valve area</li>
+        <li>A catheter calibration is listed too, so you can see what a run's lengths are based on</li>
+        <li>Copy as a table or export CSV, with no patient details from the images</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="page" id="f-ct" role="tabpanel" aria-labelledby="t-ct">
     <img src="/cardiacstudy-player/media/ct.jpg" width="1440" height="900" loading="lazy"
          alt="CardiacStudy: DICOM Viewer showing a cardiac CT slice with its position on a scout reference view and marked landmark slices">
@@ -165,9 +211,42 @@
 
   <div class="facts">
     <div><strong>Open any study</strong><p>Patient CDs, DICOMDIR folders or loose DICOM files. Every run, report and waveform in one strip, in one window.</p></div>
-    <div><strong>Private by design</strong><p>Works offline with no account. The app cannot use the network, and nothing leaves your Mac.</p></div>
-    <div><strong>One purchase</strong><p>Paid once on the Mac App Store, with free updates. No subscription and no in-app purchases.</p></div>
+    <div><strong>Private by design</strong><p>Works offline with no account. The app makes no network connections, and nothing leaves your Mac or PC.</p></div>
+    <div><strong>One purchase</strong><p>Paid once on the Mac App Store or the Microsoft Store (try it free for 30 days on Windows), with free updates. No subscription and no in-app purchases.</p></div>
   </div>
+
+  <h2 id="versions">Versions</h2>
+  <p>CardiacStudy: DICOM Viewer is sold only through the Mac App Store and the Microsoft Store, which deliver every update. The two editions have the same features.</p>
+  <table class="versions">
+    <thead><tr><th>Store</th><th>Latest version</th><th>Requires</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://apps.apple.com/app/id6824492948">Mac App Store</a></td><td><span id="mac-version-2">1.2.0</span></td><td>macOS 15 or later, Apple silicon or Intel</td></tr>
+      <tr><td><a href="https://apps.microsoft.com/detail/9NCS1WJT41L2">Microsoft Store</a></td><td>1.2.1</td><td>Windows 10 (1809 or later) or Windows 11, 64-bit (x64)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1.2: Annotate and Measure (November 2026)</h3>
+  <p class="ver-note">Mac 1.2.0. Windows 1.2.1 is the first Microsoft Store release, with everything below.</p>
+  <ul>
+    <li>Annotate: text, arrows, boxes and ovals over the image, kept with the study and burned into copied and exported images</li>
+    <li>Angiography: stenosis (manual QCA, with edges snapped to the vessel) and LV ejection fraction from a ventriculogram</li>
+    <li>Echo: Doppler velocities, VTI and pressure half-time; 2D dimensions and areas; LV volumes and EF by Simpson's method; M-mode</li>
+    <li>Measurement summary for the whole study, copied as a table or exported as CSV</li>
+    <li>Quiz Mode findings record the whole measurement: a stenosis's diameters and length, an EF's volumes, and where each was made</li>
+    <li>A catheter calibration stays on the image it was made on</li>
+    <li>The Cardiology Training Guide and DICOM Conformance Statement are built in, on the Help menu</li>
+  </ul>
+
+  <h3>1.1.0 (Mac, 11 November 2026)</h3>
+  <ul>
+    <li>CT and MR: each slice's body position, a reference view on the study's scout image, and marked landmark slices</li>
+    <li>QuickTime export waits until a playing run is stopped</li>
+  </ul>
+
+  <h3>1.0.0 (Mac, 2 November 2026)</h3>
+  <ul>
+    <li>First release on the Mac App Store, replacing the MacAngioView beta</li>
+  </ul>
 
   <div class="notice">
     <p><strong>Not for clinical use.</strong> CardiacStudy: DICOM Viewer is not a certified medical device and must not be used for diagnosis or clinical decisions. Read and report from your clinical PACS or cath lab workstation.</p>
@@ -177,34 +256,35 @@
 
   <h3>Requirements</h3>
   <ul>
-    <li>macOS 15 or later</li>
-    <li>Apple silicon or Intel Mac</li>
+    <li>Mac: macOS 15 or later, on Apple silicon or Intel</li>
+    <li>Windows: Windows 10 (version 1809 or later) or Windows 11, 64-bit (x64)</li>
     <li>No account and no internet connection needed</li>
   </ul>
-  <p>Once installed, the app appears as <strong>CardiacStudy Player</strong> in your Applications folder and menu bar.</p>
+  <p>Once installed, the app appears as <strong>CardiacStudy Player</strong>: in your Applications folder and menu bar on a Mac, and in the Start menu on Windows. On the Microsoft Store it is listed as CardiacStudy Player.</p>
 
   <h3>What can it open?</h3>
   <p>Patient CDs, DICOMDIR folders, folders of DICOM files and single DICOM files. The <a href="/cardiacstudy-player/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> lists every supported image type and compression.</p>
 
-  <h3>Why does it ask me to choose a folder after I open a DICOMDIR file?</h3>
+  <h3>Mac: why does it ask me to choose a folder after I open a DICOMDIR file?</h3>
   <p>Mac App Store apps may read only what you choose. A DICOMDIR file only indexes the study; the images sit in the folders around it. The app asks once for the disc or folder that holds the DICOMDIR (it is already selected), so click <strong>Open</strong>. To skip this step, open the disc or folder itself instead of the DICOMDIR file.</p>
 
   <h3>Does it send my studies anywhere?</h3>
-  <p>No. The app cannot use the network, and nothing leaves your Mac. See the <a href="/cardiacstudy-player/privacy.html">privacy policy</a>.</p>
+  <p>No. The app makes no network connections, and nothing leaves your Mac or PC. See the <a href="/cardiacstudy-player/privacy.html">privacy policy</a>.</p>
 
   <h3>A study won't open, or something looks wrong</h3>
   <p>Email us with the modality (for example XA, US or CT), the equipment vendor if you know it, what you expected and what you saw. A screenshot of the app with patient details cropped out helps. <strong>Please never send patient images, discs or files that identify a patient.</strong></p>
 
   <h3>Documentation</h3>
+  <p>The Cardiology Training Guide covers using the app for cath, echo, CT/MR and ECG review and teaching. Both documents are also on the app's Help menu.</p>
   <ul>
-    <li><a href="/cardiacstudy-player/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> (PDF)</li>
-    <li><a href="/cardiacstudy-player/CardiacStudyPlayer-Cardiology-Training-Guide.pdf">Cardiology Training Guide</a> (PDF): using the app for cath, echo, CT/MR and ECG review and teaching</li>
+    <li>Mac: <a href="/cardiacstudy-player/CardiacStudyPlayer-Cardiology-Training-Guide.pdf">Cardiology Training Guide</a> · <a href="/cardiacstudy-player/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> (PDF)</li>
+    <li>Windows: <a href="/cardiacstudy-player/windows/CardiacStudyPlayer-Cardiology-Training-Guide.pdf">Cardiology Training Guide</a> · <a href="/cardiacstudy-player/windows/DICOM_CONFORMANCE.pdf">DICOM Conformance Statement</a> (PDF)</li>
   </ul>
 
   <h3>Contact</h3>
   <div class="contact">
     <p>Questions, problems and suggestions: <a href="mailto:support@williamshillsoftware.com">support@williamshillsoftware.com</a></p>
-    <p>You can also use the email link in <strong>CardiacStudy Player ▸ About CardiacStudy Player</strong>.</p>
+    <p>You can also use the email link in the app's About box (on a Mac, <strong>CardiacStudy Player ▸ About CardiacStudy Player</strong>).</p>
   </div>
 </main>
 <footer>© 2026 Wil Lapointe · <a href="/cardiacstudy-player/privacy.html">Privacy policy</a></footer>
@@ -230,5 +310,18 @@
   });
 })();
 </script>
+<script>
+// The Mac App Store's current version, from Apple's public lookup (JSONP,
+// as it sends no CORS header). On any failure the version written above stays.
+function macVersion(r) {
+  var v = r && r.results && r.results[0] && r.results[0].version;
+  if (!v) return;
+  ['mac-version', 'mac-version-2'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = v;
+  });
+}
+</script>
+<script async src="https://itunes.apple.com/lookup?id=6824492948&amp;callback=macVersion"></script>
 </body>
 </html>

@@ -63,7 +63,7 @@ footer a { color: var(--muted); }
 /* Wide product page (CardiacStudy Player): room for two columns of media. */
 body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
 .previews {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 20px; margin: 8px 0 8px;
 }
 .previews figure { margin: 0; min-width: 0; }
@@ -99,3 +99,9 @@ body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
   .page { grid-template-columns: 1fr; }
 }
 .tabs[hidden], .page[hidden] { display: none; }
+.badges { display: flex; flex-wrap: wrap; gap: 0 16px; align-items: center; }
+.latest { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+table.versions { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 15px; }
+table.versions th, table.versions td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.versions th { color: var(--muted); font-weight: 600; }
+.ver-note { color: var(--muted); font-size: 15px; margin: 0 0 8px; }

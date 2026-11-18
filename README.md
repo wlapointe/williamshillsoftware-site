@@ -18,7 +18,16 @@ originals change:
 | `cardiacstudy-player/DICOM_CONFORMANCE.pdf` | `docs/DICOM_CONFORMANCE.pdf` |
 | `cardiacstudy-player/CardiacStudyPlayer-Cardiology-Training-Guide.pdf` | `docs/CardiacStudyPlayer-Cardiology-Training-Guide.pdf` |
 | `cardiacstudy-player/icon.png` | `tools/app_icon_1024.png`, scaled to 256 px |
-| `cardiacstudy-player/media/ct.jpg` | `build/store-screenshots/5-ct.png` (tools/store_screenshots.sh), saved as JPEG |
+| `cardiacstudy-player/media/*.jpg` (screenshots) | `build/store-screenshots/*.png` (tools/store_screenshots.sh), saved as JPEG (`sips -s format jpeg -s formatOptions 82`) |
+| `cardiacstudy-player/media/preview-*.mp4` | `build/store-previews/*.mov` (the App Store previews), `avconvert --preset Preset960x540` |
+| `cardiacstudy-player/media/poster-*.jpg` | the preview's frame at 3 s |
+| `cardiacstudy-player/windows/*.pdf` | WinAngioViewSwift `docs/windows/*.pdf` |
 
-`badges/` holds Apple's unaltered "Download on the Mac App Store" badges
-(toolbox.marketingtools.apple.com, black for light mode, white for dark).
+`badges/` holds the stores' unaltered badges: Apple's "Download on the Mac App
+Store" (toolbox.marketingtools.apple.com, black for light mode, white for
+dark) and Microsoft's "Get it from Microsoft" (get.microsoft.com/images,
+`en-us dark.svg` for light mode, `en-us light.svg` for dark).
+
+The Versions section on the product page is written by hand: update it with
+each release. The Mac version number also updates itself from Apple's lookup
+API.
