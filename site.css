@@ -105,3 +105,18 @@ table.versions { border-collapse: collapse; width: 100%; margin: 8px 0 16px; fon
 table.versions th, table.versions td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
 table.versions th { color: var(--muted); font-weight: 600; }
 .ver-note { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+/* Measurements by modality: three-column reference tables; on a phone each
+   row stacks into a card, with its column names as small labels. */
+table.meas { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0 16px; }
+table.meas th, table.meas td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+table.meas th { color: var(--muted); font-weight: 600; background: var(--panel); }
+table.meas td:first-child { font-weight: 600; width: 30%; }
+table.meas td:nth-child(2) { color: var(--muted); width: 18%; }
+@media (max-width: 640px) {
+  table.meas thead { display: none; }
+  table.meas, table.meas tbody, table.meas tr, table.meas td { display: block; width: auto; }
+  table.meas tr { background: var(--panel); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+  table.meas td, table.meas td:first-child, table.meas td:nth-child(2) { width: auto; border: 0; padding: 2px 0; }
+  table.meas td:nth-child(2)::before { content: "Available when: "; font-weight: 600; }
+  table.meas td:nth-child(3) { padding-top: 6px; }
+}
