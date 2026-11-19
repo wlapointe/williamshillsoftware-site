@@ -31,3 +31,14 @@ dark) and Microsoft's "Get it from Microsoft" (get.microsoft.com/images,
 The Versions section on the product page is written by hand: update it with
 each release. The Mac version number also updates itself from Apple's lookup
 API.
+
+## Documents: always the latest
+
+The training guides and conformance statements here are always the newest
+versions, even when the copy bundled in a store build is older. Each time one
+is re-rendered (in MacAngioViewSwift `docs/` or WinAngioViewSwift
+`docs/windows/`), copy it here, keep its file name, and update its row in the
+product page's Documentation table: the date or version in the link text,
+and the same in the link's `?v=` (the guide's date, the conformance
+statement's document version). The query string shows the version in the URL
+and makes browsers fetch the new copy instead of a cached one.
