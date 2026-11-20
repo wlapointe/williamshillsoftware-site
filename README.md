@@ -1,6 +1,6 @@
 # williamshillsoftware.com
 
-Static site for Williams Hill Software (the app's store name is
+Static site for Williams Hill Software LLC (the app's store name is
 "CardiacStudy: DICOM Viewer"; installed, it is "CardiacStudy Player"), served by GitHub Pages (custom domain
 in `CNAME`; `.nojekyll` serves the files as-is).
 
