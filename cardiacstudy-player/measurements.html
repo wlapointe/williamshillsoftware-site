@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Measurements by Modality — CardiacStudy: DICOM Viewer</title>
+<meta name="description" content="Every measurement in CardiacStudy: DICOM Viewer, by modality: stenosis and LV EF on angiograms; 2D, LV volumes, Doppler and M-mode on echo; the caliper on every image; and the study's measurement summary.">
+<link rel="stylesheet" href="/site.css">
+<link rel="icon" href="/cardiacstudy-player/icon.png">
+</head>
+<body class="wide">
+<header class="site">
+  <a class="brand" href="/">Williams Hill Software</a>
+  <nav><a href="/cardiacstudy-player/">CardiacStudy: DICOM Viewer</a><a href="/cardiacstudy-player/#features">Features</a><a href="/cardiacstudy-player/#support">Support</a></nav>
+</header>
+<main>
+  <h1>Measurements by modality</h1>
+  <p class="lede">Every item on the app's <strong>Measure</strong> menu, by the kind of run it works on. An item is greyed out when the run on screen can't use it.</p>
+  <p>Every result is labelled "Educational use only". Keys are given for the Mac; on Windows, ⌥ (Option) is Alt, Return is Enter, and ⌥Tab is Ctrl+Tab. The Cardiology Training Guide (<a href="/cardiacstudy-player/CardiacStudyPlayer-Cardiology-Training-Guide.pdf?v=2026-11-19">Mac, Nov 19, 2026</a>; <a href="/cardiacstudy-player/windows/CardiacStudyPlayer-Cardiology-Training-Guide.pdf?v=2026-11-18">Windows, Nov 18, 2026</a>) explains each one step by step.</p>
+
+  <h2 id="angiography">Angiography (XA, RF)</h2>
+
+  <table class="meas">
+    <thead><tr><th>Menu item</th><th>Available when</th><th>How it's used</th></tr></thead>
+    <tbody>
+      <tr><td>Measure ▸ Stenosis</td><td>An XA or RF run</td><td>Draw the reference diameter (R), the minimal lumen diameter (MLD), an optional second reference (R2) and the lesion length. Snap to Edges pulls each end onto the vessel wall. Gives % diameter and % area stenosis, with RVD, MLD and length in mm once calibrated (px before).</td></tr>
+      <tr><td>Measure ▸ LV Ejection Fraction</td><td>An XA or RF run</td><td>On a ventriculogram, trace the LV outline at end-diastole, then at end-systole. Gives EDV and ESV (mL, when calibrated) and EF. One pair per run; ⌥Tab steps between the traces.</td></tr>
+      <tr><td>Measure ▸ Calibrate Caliper…</td><td>Any image run</td><td>Set the scale from a known size, usually the catheter (for example 6F): click its two edges and pick the size. It stays on the image as a Calibration mark and is listed in the Measurement Summary.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="echo-2d">Echo: 2D images (US)</h2>
+
+  <table class="meas">
+    <thead><tr><th>Menu item</th><th>Available when</th><th>How it's used</th></tr></thead>
+    <tbody>
+      <tr><td>Measure ▸ 2D Linear ▸ Left ventricle ▸ IVSd, LVIDd, LVPWd, LVIDs</td><td>A US image, or any image with ultrasound regions</td><td>Click two points across the wall or cavity: IVSd, LVIDd and LVPWd at end-diastole, LVIDs at end-systole. Together they give LV mass (ASE cube), mass index, RWT, FS and Teichholz EF.</td></tr>
+      <tr><td>Measure ▸ 2D Linear ▸ Outflow ▸ LVOT diameter, Aortic root</td><td>The same</td><td>LVOT inner edge to inner edge in mid-systole; aortic root at the sinuses at end-diastole. The LVOT diameter feeds stroke volume and AVA.</td></tr>
+      <tr><td>Measure ▸ 2D Area ▸ Atria ▸ LA (A4C), LA (A2C), RA</td><td>The same</td><td>Trace the atrium at end-systole (its largest) in the named view; Return or a double-click closes the trace. Gives LA volume (area-length) and LA volume index; A4C and A2C together give the biplane LA volume.</td></tr>
+      <tr><td>Measure ▸ 2D Area ▸ Right ventricle ▸ RV (ED), RV (ES)</td><td>The same</td><td>Trace the RV in an RV-focused apical 4-chamber view at end-diastole and end-systole. Gives RV FAC (fractional area change).</td></tr>
+      <tr><td>Measure ▸ LV Volumes ▸ Apical 4-chamber / Apical 2-chamber ▸ LV A4C (ED), LV A4C (ES), LV A2C (ED), LV A2C (ES)</td><td>The same</td><td>Trace the LV endocardium at end-diastole (largest) and end-systole (smallest). One view gives single-plane Simpson's EDV, ESV and EF; both views give the biplane Simpson's volumes and EF.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="echo-doppler">Echo: Doppler and M-mode (US)</h2>
+
+  <table class="meas">
+    <thead><tr><th>Menu item</th><th>Available when</th><th>How it's used</th></tr></thead>
+    <tbody>
+      <tr><td>Measure ▸ Doppler ▸ Velocity ▸ MV E, MV A, AV Vmax, LVOT Vmax, TR Vmax, PV Vmax, e′ septal, e′ lateral</td><td>The image has a PW or CW Doppler strip</td><td>Click the peak of the spectrum; Snap to Edges finds the envelope. Gives the velocity and peak gradient (tissue Doppler e′ in cm/s). Together they give E/A and E/e′.</td></tr>
+      <tr><td>Measure ▸ Doppler ▸ VTI ▸ LVOT VTI, AV VTI, MV VTI</td><td>The same</td><td>Trace the envelope of one beat (3 or more points, Return to finish). LVOT VTI with the LVOT diameter gives stroke volume, cardiac output and stroke volume index; with AV VTI or Vmax, AVA by continuity.</td></tr>
+      <tr><td>Measure ▸ Doppler ▸ Pressure half-time ▸ MV PHT</td><td>The same</td><td>Click the E peak, then a point down the deceleration slope. Gives the PHT and the mitral valve area (220 ÷ PHT).</td></tr>
+      <tr><td>Measure ▸ M-mode ▸ Annulus ▸ TAPSE, MAPSE</td><td>The image has an M-mode region</td><td>Click the annulus at end-diastole, then at end-systole.</td></tr>
+      <tr><td>Measure ▸ M-mode ▸ Left ventricle ▸ IVSd, LVIDd, LVPWd, LVIDs</td><td>The same</td><td>As in 2D Linear, on the M-mode trace.</td></tr>
+      <tr><td>Measure ▸ M-mode ▸ Rhythm ▸ Heart rate</td><td>The same</td><td>Click two R waves (or the same point on two beats) one beat apart.</td></tr>
+      <tr><td>Measure ▸ M-mode ▸ Other ▸ Distance and time</td><td>The same</td><td>Any two points: the distance and the time between them.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="every-run">Every image run (XA, RF, US, CT, MR), and the whole study</h2>
+
+  <table class="meas">
+    <thead><tr><th>Menu item</th><th>Available when</th><th>How it's used</th></tr></thead>
+    <tbody>
+      <tr><td>Measure ▸ Caliper Tool</td><td>Any image run (not reports, ECG or other paged runs)</td><td>Click two points for a distance, scaled by the ultrasound region, pixel spacing, the angiogram's geometry or your catheter calibration. On CT and MR it is the only measurement.</td></tr>
+      <tr><td>Measure ▸ Finish Measurement</td><td>A trace is in progress</td><td>Ends a multi-point trace (LV, area, VTI); the same as Return.</td></tr>
+      <tr><td>Measure ▸ Snap to Edges</td><td>Angiograms and Doppler strips (not plain 2D echo)</td><td>When on, points snap to vessel or catheter edges and to the Doppler envelope. Hold ⌥ to place a point exactly.</td></tr>
+      <tr><td>Measure ▸ Measurement Summary…</td><td>A study is open</td><td>Every measurement in the study and where it was made, the mean of repeated ones (never of stenoses), and results that combine images: biplane LA volume and Simpson's EF, stroke volume, cardiac output, AVA and E/e′. Copy it as a table or export CSV, with no patient details.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notice">
+    <p><strong>Not for clinical use.</strong> These are teaching measurements. CardiacStudy: DICOM Viewer is not a certified medical device and must not be used for diagnosis or clinical decisions.</p>
+  </div>
+</main>
+<footer>© 2026 Wil Lapointe · <a href="/cardiacstudy-player/privacy.html">Privacy policy</a></footer>
+</body>
+</html>

@@ -63,7 +63,7 @@ footer a { color: var(--muted); }
 /* Wide product page (CardiacStudy Player): room for two columns of media. */
 body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
 .previews {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 20px; margin: 8px 0 8px;
 }
 .previews figure { margin: 0; min-width: 0; }
@@ -72,6 +72,9 @@ body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
   border: 1px solid var(--rule); border-radius: 10px;
 }
 .previews figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.tutorial { margin: 8px 0 24px; max-width: 958px; }
+.tutorial video { display: block; width: 100%; height: auto; background: #000; border: 1px solid var(--rule); border-radius: 10px; }
+.tutorial figcaption { color: var(--muted); font-size: 14px; margin-top: 6px; }
 .new { font-size: .7em; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #fff; background: #0a84ff; border-radius: 999px; padding: 1px 7px; margin-left: 4px; vertical-align: 2px; }
 .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
 .tab {
@@ -96,3 +99,24 @@ body.wide header.site, body.wide main, body.wide footer { max-width: 1040px; }
   .page { grid-template-columns: 1fr; }
 }
 .tabs[hidden], .page[hidden] { display: none; }
+.badges { display: flex; flex-wrap: wrap; gap: 0 16px; align-items: center; }
+.latest { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+table.versions { border-collapse: collapse; width: 100%; margin: 8px 0 16px; font-size: 15px; }
+table.versions th, table.versions td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.versions th { color: var(--muted); font-weight: 600; }
+.ver-note { color: var(--muted); font-size: 15px; margin: 0 0 8px; }
+/* Measurements by modality: three-column reference tables; on a phone each
+   row stacks into a card, with its column names as small labels. */
+table.meas { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0 16px; }
+table.meas th, table.meas td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--rule); }
+table.meas th { color: var(--muted); font-weight: 600; background: var(--panel); }
+table.meas td:first-child { font-weight: 600; width: 30%; }
+table.meas td:nth-child(2) { color: var(--muted); width: 18%; }
+@media (max-width: 640px) {
+  table.meas thead { display: none; }
+  table.meas, table.meas tbody, table.meas tr, table.meas td { display: block; width: auto; }
+  table.meas tr { background: var(--panel); border-radius: 12px; padding: 12px 14px; margin: 0 0 12px; }
+  table.meas td, table.meas td:first-child, table.meas td:nth-child(2) { width: auto; border: 0; padding: 2px 0; }
+  table.meas td:nth-child(2)::before { content: "Available when: "; font-weight: 600; }
+  table.meas td:nth-child(3) { padding-top: 6px; }
+}
